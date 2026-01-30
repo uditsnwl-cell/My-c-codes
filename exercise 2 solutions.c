@@ -251,3 +251,84 @@ int main() {
 
 
 
+/* Given three points (x1, y1), (x2, y2) and (x3, y3), write a 
+program to check if all the three points fall on one straight line.
+ */
+
+
+
+#include <stdio.h>
+int main() {
+    int x1,x2,x3,y1,y2,y3,a;
+    printf("enter the coordinates:\n");
+    scanf("%d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+
+     a = x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2);
+
+    if(a==0)
+        printf("the points are collinear\n");
+    else
+        printf("the points are not collinear\n");
+
+        return 0;
+}
+
+/* Given the coordinates (x, y) of a center of a circle and it’s radius, 
+write a program which will determine whether a point lies inside 
+the circle, on the circle or outside the circle. */
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+
+    int x1,y1;
+    int x2,y2;
+    float d,r;
+
+    printf("enter the oordinates of center of the cicle:\n");
+    scanf("%d %d",&x1,&y1);
+
+    printf("enter the given points:\n");
+    scanf("%d %d",&x2,&y2);
+     
+    printf("enter the radius of the circle:\n");
+    scanf("%f",&r);
+
+    d=sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+    if(d==r)
+        printf("the point lies on the circle\n");
+    else if(d<r)
+        printf("the point lies inside the circle\n");
+    else
+        printf("the point lies outside the circle\n");
+
+        return 0;
+
+}
+
+/* 
+Given a point (x, y), write a program to find out if it lies on the 
+x-axis, y-axis or at the origin, viz. (0, 0). */
+
+
+#include <stdio.h>
+int main() {
+
+   int x,y;
+   
+   printf("enter the coordinates of points");
+   scanf("%d %d",&x,&y);
+
+   if9x=0 && y==0)
+   printf("point lies at origin");
+   else if (x==0 && y!=0)
+   printf("point lies on y axis");
+
+   else if (y==0 && x!=0)
+   printf("point lies on x axis");
+
+   else 
