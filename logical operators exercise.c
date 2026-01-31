@@ -174,3 +174,163 @@ under consideration and output the grade of the steel. */
          printf("grade 5\n");} 
  return 0;
 }
+/* 
+A library charges a fine for every book returned late. For first 
+5 days the fine is 50 paise, for 6-10 days fine is one rupee and 
+above 10 days fine is 5 rupees. If you return the book after 30 
+days your membership will be cancelled. Write a program to 
+accept the number of days the member is late to return the 
+book and display the fine or the appropriate message. */
+
+
+
+#include <stdio.h>
+int main() {
+    int d;
+
+    printf("Enter number of days you are late : ");
+    scanf("%d", &d);
+
+    if (d <= 5) {
+        printf("Fine: 50 paise\n");
+    } else if (d > 5 && d <= 10) {
+        printf("Fine: Rs. 1\n");
+    } else if (d > 10 && d <= 30) {
+        printf("Fine: Rs. 5\n");
+    } else if (d > 30) {
+        printf("Membership cancelled\n");
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+/* If the three sides of a triangle are entered through the 
+keyboard, write a program to check whether the triangle is 
+valid or not. The triangle is valid if the sum of two sides is 
+greater than the largest of the three sides. */
+
+
+
+
+#include <stdio.h>
+int main() {
+    int a,b,c;
+
+    printf(" enter the angles of triangle:");
+    scanf("%d %d %d",&a,&b,&c);
+
+    if (a+b+c==180) {
+        printf("it is a valid triangle\n");
+    } else {
+        printf("it is not a valid triangle\n");
+    }
+    return 0;
+}
+
+
+/* If the three sides of a triangle are entered through the 
+keyboard, write a program to check whether the triangle is 
+isosceles, equilateral, scalene or right angled triangle.
+
+ */
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+
+ int a,b,c ;
+  printf(" enter the sides of the triangle:");
+  scanf("%d %d %d",&a,&b,&c);
+
+ if (a==b && b!=c && a!=c || a==c && c!=b && a!=b || b==c && b!=a && c!=a )
+      printf("it is a icosceles triangle\n");
+    else if (a==b && b==c && a==c)
+      printf(" it is  an equilateral triangle\n");
+    else if (a*a+b*b==c*c || b*b+c*c==a*a || a*a+c*c==b*b)
+     printf(" it is a right angled triangle\n");
+    else 
+     printf("it is a scalene triangle\n");
+  return 0;
+}
+
+
+
+
+/* In a company, worker efficiency is determined on the basis of 
+the time required for a worker to complete a particular job. If 
+the time taken by the worker is between 2 – 3 hours, then the 
+worker is said to be highly efficient. If the time required by 
+the worker is between 3 – 4 hours, then the worker is ordered 
+to improve speed. If the time taken is between 4 – 5 hours, the 
+worker is given training to improve his speed, and if the time 
+taken by the worker is more than 5 hours, then the worker has 
+to leave the company. If the time taken by the worker is input 
+through the keyboard, find the efficiency of the worker. */
+
+
+
+#include <stdio.h>
+int main() {
+int t;
+ printf("enter the time talen to cpmlete the work in hours:");
+  scanf("%d",&t);
+if (t>=2 && t<=3)
+ printf("you are a highly efficient emplyee keep it up\n");
+else if (t>=3 && t<=4)
+printf("you need to improve your speed of work\n");
+else if (t>=4 && t<=5)
+printf("you ARE GIVEN TRAINING TO IMPROVE SPEED\n");
+else
+printf("you are fired from the job fuck you!\n");
+ return 0;
+}
+
+
+
+
+   /* A university has the following rules for a student to qualify 
+for a degree with A as the main subject and B as the 
+subsidiary subject: 
+(a) He should get 55 percent or more in A and 45 percent or 
+more in B. 
+(b) If he gets than 55 percent in A he should get 55 percent or 
+more in B. However, he should get at least 45 percent in 
+A. 
+(c) If he gets less than 45 percent in B and 65 percent or more 
+in A he is allowed to reappear in an examination in B to 
+qualify. 
+(d) In all other cases he is declared to have failed. 
+Write a program to receive marks in A and B and Output 
+whether the student has passed, failed or is allowed to 
+reappear in B
+ */
+
+
+
+
+#include <stdio.h>
+int main()
+{
+ int a,b;
+    printf("enter your marks of main subject and subsidiary subject:");
+    scanf("%d %d",&a,&b);
+    if (a>=55 && b>=45)
+    printf("you are pass\n");
+    else if(a>=45 && a<55 && b>=55)
+    printf("you are pass\n");
+    else if(a<45 &&  b>=65)
+    printf("you can reappear on the main subject examination\n");
+    else
+    printf("you are failed\n");
+  return 0;
+}
+
+
+
+
+
