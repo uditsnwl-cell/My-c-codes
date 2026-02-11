@@ -208,3 +208,54 @@ int main()
     return 0;
 
 }
+
+
+/* Write a program to print all prime numbers from 1 to 300. 
+(Hint: Use nested loops, break and continue) */
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int i, j, flag;
+
+    for (i = 2; i <= 300; i++)   
+    {
+        flag = 0;               
+
+        for (j = 2; j <= i/2; j++)  
+        {
+            if (i % j == 0)      
+            {
+                flag = 1;        
+                break;           
+            }
+        }
+
+        if (flag == 1)
+            continue;           
+
+        printf("%d\n", i);       
+    }
+
+    return 0;
+}
+
+
+
+/* Write a program to fill the entire screen with a smiling face. 
+The smiling face has an ASCII value 1. */
+
+
+#include <stdio.h>
+ int main()
+{
+  while(1)
+ {
+    printf("\n%c",1);
+ }
+
+  return 0;
+}
