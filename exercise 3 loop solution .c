@@ -259,3 +259,38 @@ The smiling face has an ASCII value 1. */
 
   return 0;
 }
+
+
+/* 
+Write a program to find the octal equivalent of the entered 
+number.  */
+
+
+#include <stdio.h>
+int main()
+{
+ int i=0,rem[300],num;
+ printf("enter the number of your choice:");
+ scanf("%d", &num);
+
+    if(num==0){
+    printf("the octal equivalent of the entered number is 0");
+   
+    }
+    else{
+           while(num>0)
+           {
+             rem[i]=num%8;
+             num=num/8;
+             i++;
+           }
+             printf("the octal number of the given digit is :");
+
+           for(int j=i-1;j>=0;j--)
+            {
+              printf("%d", rem[j]);
+            }
+        }
+
+    return 0;    
+}

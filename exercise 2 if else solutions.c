@@ -323,7 +323,7 @@ int main() {
    printf("enter the coordinates of points");
    scanf("%d %d",&x,&y);
 
-   if9x=0 && y==0)
+   if(9x=0 && y==0)
    printf("point lies at origin");
    else if (x==0 && y!=0)
    printf("point lies on y axis");
