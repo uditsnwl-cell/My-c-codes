@@ -294,3 +294,130 @@ int main()
 
     return 0;    
 }
+
+
+
+
+
+/* 
+ Write a program to add first seven terms of the following 
+series using a for loop: 
+1/1!+ 2/2!+3/3! ……
+ */
+
+
+#include <stdio.h>
+int main()
+{
+    int i;
+    float sum=0,n,pf=1;
+
+    for(i=1;i<=7;i++){
+      n=i;
+      pf=pf*n;
+      sum=sum+(n/pf);
+    }
+    printf("the ans of the question is %f",sum);
+   
+}
+
+
+
+/* Write a program to generate all combinations of 1, 2 and 3 
+using for loop. */
+
+
+#include <stdio.h>
+int main()
+{  
+    int first,second,third;
+
+for(first = 1; first <= 3; first++){
+   for(second = 1; second <= 3; second++)
+       for(third = 1; third <= 3; third++)
+       
+    printf("%d,%d,%d",first, second, third);
+}
+
+return 0;
+}
+
+
+
+
+/* According to a study, the approximate level of intelligence of 
+a person can be calculated using the following formula:  
+i = 2 + ( y + 0.5 x )  
+Write a program, which will produce a table of values of i, y 
+and x, where y varies from 1 to 6, and, for each value of y, x 
+varies from 5.5 to 12.5 in steps of 0.5. */
+
+
+
+#include <stdio.h>
+int main()
+{  
+    int y;
+    float x,i;
+
+
+for(y= 1; y <= 6; y++){
+   for(x =5.5; x <= 12.5;x=x+0.5){
+       
+      i = 2 + ( y + 0.5 * x ); 
+       
+    printf("%d,%0.1f,%0.2f",y,x,i);}
+}
+
+return 0;
+}
+
+
+/* 
+ Write a program to fill the entire screen with diamond and 
+heart alternatively. The ASCII value for heart is 3 and that of 
+diamond is 4. 
+ */
+
+
+
+#include <stdio.h>
+int main()
+{  
+
+int i=3,j=4;
+
+for(;;){
+  printf("%c",i);
+printf("%c",j);
+
+}
+ return 0;
+}
+
+
+
+
+/* Write a program to print the multiplication table of the 
+number entered by the user. The table should get displayed in 
+the following form. 
+29 * 1 = 29 
+29 * 2 = 58 
+ …  */ 
+
+
+
+#include <stdio.h>
+int main()
+{
+int n,x,mul;
+printf("enter the number yop want the table of: ");
+scanf("%d",&n);
+for(x=1;x<=10;x++){
+    mul=n*x;
+   printf("%d*%d=%d\n",n,x,mul);
+
+}
+return 0;
+
+}
