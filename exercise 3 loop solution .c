@@ -421,3 +421,75 @@ for(x=1;x<=10;x++){
 return 0;
 
 }
+
+/* Write a program to produce the following output:
+      1
+    2   3
+  4   5   6
+7   8    9  10 
+*/
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int i, j, k = 1, rows = 4;
+
+    for(i = 1; i <= rows; i++) {
+        
+        // Print spaces
+        for(j = 1; j <= rows - i; j++) {
+            printf("  ");
+        }
+
+        // Print numbers
+        for(j = 1; j <= i; j++) {
+            printf("%d   ", k++);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+/*Write a program to produce the following output:
+       1
+     1   1
+   1   2   1
+ 1   3   3   1
+1   4   6   4   1 */
+
+
+#include <stdio.h>
+
+int main() {
+    int i, j, k, num, rows = 5;
+
+    for(i = 0; i < rows; i++) {
+        
+        // Print spaces
+        for(j = 0; j < rows - i; j++) {
+            printf("  ");
+        }
+
+        num = 1;  // first value in every row is 1
+        
+        // Print numbers
+        for(k = 0; k <= i; k++) {
+            printf("%d   ", num);
+            num = num * (i - k) / (k + 1);  // formula
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
