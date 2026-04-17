@@ -99,6 +99,64 @@ int main() {
                 break;
         }
     }
+    return 0;
 }
 
 
+
+
+
+/*Write a program which to find the grace marks for a student
+using switch. The user should enter the class obtained by the
+student and the number of subjects he has failed in.
+− If the student gets first class and the number of subjects he
+failed in is greater than 3, then he does not get any grace.
+If the number of subjects he failed in is less than or equal
+to 3 then the grace is of 5 marks per subject.
+− If the student gets second class and the number of subjects
+he failed in is greater than 2, then he does not get any
+grace. If the number of subjects he failed in is less than or
+equal to 2 then the grace is of 4 marks per subject.
+− If the student gets third class and the number of subjects
+he failed in is greater than 1, then he does not get any
+grace. If the number of subjects he failed in is equal to 1
+then the grace is of 5 marks per subject */
+
+#include <stdio.h>
+int main() {
+
+    int ch,f;
+    printf("enter the number of classes you have attended (1-3):");
+    scanf("%d",&ch);
+        printf("enter the number of subjects you failed :");
+    scanf("%d",&f);
+
+    switch (ch)
+    { case 1 :
+        if (f>3)
+          printf("no grace is provided");
+       else if (f<=3)
+         printf("you get grace of 5 marks per sbjest");
+
+     break ;
+
+     case 2 :
+        if (f>2)
+          printf("no grace is provided");
+        else if (f<=2)
+          printf("you get grace of 4 marks per sbjest");
+      break ;
+
+     case 3 :
+        if (f>1)
+         printf("no grace is provided");
+        else if (f==1)
+          printf("you get grace of 5 marks per sbjest");
+     break ;
+
+     default:
+         printf("invalid input");
+       }
+
+ return 0;
+}
